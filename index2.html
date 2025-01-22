@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+</head>
+<body>
+    <h1>Google Authentication Demo</h1>
+
+    <!-- Registration Section -->
+    <div id="registration">
+        <h2>Register</h2>
+        <input type="text" id="username" placeholder="Enter username" />
+        <button id="generateQR">Generate QR Code</button>
+        <canvas id="qrcode"></canvas>
+        <p id="secret"></p>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Enter username" />
+        <input type="text" id="otp" placeholder="Enter OTP" />
+        <button id="validateOTP">Validate OTP</button>
+        <p id="loginMessage"></p>
+    </div>
+
+    <!-- Include Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/otplib-browser-min@8.0.2/otplib-browser.min.js"></script>
+
+    <script src="script2.js"></script>
+</body>
+</html>
