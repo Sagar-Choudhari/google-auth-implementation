@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Authenticator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Authenticator Demo</h1>
+        
+        <!-- Registration -->
+        <div id="register">
+            <h2>Register</h2>
+            <p>Scan this QR code in your Google Authenticator app:</p>
+            <canvas id="qrcode"></canvas>
+            <p><strong>Secret Key:</strong> <span id="secret"></span></p>
+        </div>
+
+        <!-- Login -->
+        <div id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" placeholder="123456" maxlength="6" required>
+                <button type="submit">Verify</button>
+            </form>
+            <p id="loginResult"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
